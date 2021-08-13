@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Florian Hoehle, mail@FlorianHoehle.de">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>PokeBattle</title>
+</head>
+<body>
+<header>
+    <img src="./img/pokemon.png" alt="pokemon logo">
+    <h1>PokeBattle</h1>
+</header>
+<main>
+<!-- POKEMON1 -->
+    <div class="pokemon">
+        <h2 id="name1" class="name"></h2>
+        <img id="pic1" src="" alt="">
+        <div class="pokemonSelect">
+            <label for="selectName1">Select Pokemon:</label>
+            <select name="selectName1"
+                id="selectName1"
+                class="selectName"
+                onchange="selectPokemon(1, document.getElementById('selectName1').value)">
+                <option value="select"></option>
+                <option value="Pikachu">Pikachu</option>
+                <option value="Snorlax">Snorlax</option>
+                <option value="Rattata">Rattata</option>
+            </select>
+        </div>
+        <div class="bars">
+            <label for="health1">HP:</label>
+            <progress id="health1" class="health" value="100" max="100"></progress>
+            <label for="mana1">MP:</label>
+            <progress id="mana1" class="mana" value="100" max="100"></progress>
+        </div>
+        <div class="attacks">
+            <button class="a1" onclick="attack(1, 0)">Attack1</button>
+            <button class="a2" onclick="attack(1, 1)">Attack2</button>
+            <button class="a3" onclick="attack(1, 2)">Attack3</button>
+            <button class="a4" onclick="attack(1, 3)">Attack4</button>
+        </div>
+        <div class="potions">
+            <button id="addHealth1s" onclick="addHealth(1, 20)">Health Potion (20HP)</button>
+            <button id="addMana1s" onclick="addMana(1, 20)">Mana Potion (20MP)</button>
+            <button id="addHealth1l" onclick="addHealth(1, 40)">Health Potion (40HP)</button>
+            <button id="addMana1l" onclick="addMana(1, 40)">Mana Potion (40MP)</button>
+        </div>
+        <div class="learnAttacks">
+            <select name="selectAttack1" id="selectAttack1" class="selectAttack">
+                <option value="choose">choose attack</option>
+                <option value="attack1">attack1</option>
+                <option value="attack2">attack2</option>
+                <option value="attack3">attack3</option>
+            </select>
+            <input type="submit" id="learn1" value="Learn Attack">
+        </div>
+    </div>
+<!-- FIGHT INFO -->
+    <div id="infoBox">
+        <h2>Fight Info:</h2>
+        <h3 id="info"></h3>
+    </div>
+<!-- POKEMON2 -->
+    <div class="pokemon">
+        <h2 id="name2" class="name"></h2>
+        <img id="pic2" src="" alt="">
+        <div class="pokemonSelect">
+            <label for="selectName1">Select Pokemon:</label>
+            <select name="selectName2"
+                id="selectName2"
+                class="selectName"
+                onchange="selectPokemon(2, document.getElementById('selectName2').value)">
+                <option value="select"></option>
+                <option value="Pikachu">Pikachu</option>
+                <option value="Snorlax">Snorlax</option>
+                <option value="Rattata">Rattata</option>
+            </select>
+        </div>
+        <div class="bars">
+            <label for="health2">HP:</label>
+            <progress id="health2" class="health" value="100" max="100"></progress>
+            <label for="mana2">MP:</label>
+            <progress id="mana2" class="mana" value="100" max="100"></progress>
+        </div>
+        <div class="attacks">
+            <button class="a1" onclick="attack(2, 0)">Attack1</button>
+            <button class="a2" onclick="attack(2, 1)">Attack2</button>
+            <button class="a3" onclick="attack(2, 2)">Attack3</button>
+            <button class="a4" onclick="attack(2, 3)">Attack4</button>
+        </div>
+        <div class="potions">
+            <button id="addHealth2s" onclick="addHealth(2, 20)">Health Potion (20HP)</button>
+            <button id="addMana2s" onclick="addMana(2, 20)">Mana Potion (20MP)</button>
+            <button id="addHealth2l" onclick="addHealth(2, 40)">Health Potion (40HP)</button>
+            <button id="addMana2l" onclick="addMana(2, 40)">Mana Potion (40MP)</button>
+        </div>
+        <div class="learnAttacks">
+            <select name="selectAttack2" id="selectAttack2" class="selectAttack">
+                <option value="choose">choose attack</option>
+                <option value="attack1">attack1</option>
+                <option value="attack2">attack2</option>
+                <option value="attack3">attack3</option>
+            </select>
+            <input type="submit" id="learn2" value="Learn Attack">
+        </div>
+    </div>
+</main>
+<footer>
+    
+</footer>
+<script src="js.js"></script>
+</body>
+</html>

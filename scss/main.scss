@@ -1,0 +1,103 @@
+/* GENERAL */
+:root{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    // border: 1px solid red;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    background-color: #322;
+    height: 100vh;
+}
+
+/* HEADER */
+header{
+    height: 10%;
+    text-align: center;
+    img{
+        width: 20%;
+    }
+}
+/* MAIN */
+main{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon{
+    margin: 5rem;
+    padding: 1rem;
+    width: 20%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    .name{
+        text-align: center;
+    }
+    .img{
+        width: 215px;
+        height: 215px;
+    }
+    div{width: 100%;}
+    progress{
+        width: 100%;
+        margin-right: 100%;
+        color: red;
+    }
+}
+
+button{
+    margin: .1rem;
+    padding: .5rem 1rem;
+    background-color: #ad0;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    
+}
+
+.pokemonSelect{
+    display: flex;
+    justify-content: center;
+}
+.selectAttack{
+    width: 49%;
+}
+.attacks button{
+    width: 23%;
+    margin-top: 2rem;
+}
+.potions button{
+    width: 48%;
+}
+
+
+
+#infoBox{
+    width: 25%;
+    text-align: center;
+}
+/* FOOTER */
+
+
+@media screen and (orientation:portrait){
+    main{
+        flex-direction:column;
+    }
+    .pokemon{
+        width: 50%;
+    }
+}
